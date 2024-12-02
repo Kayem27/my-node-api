@@ -14,3 +14,8 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
   
 });
+
+const users = [{ id: 1, name: 'John Doe' }, { id: 2, name: 'Jane Doe' }];
+app.get('/users', (req, res) => {
+  res.json(users);
+});
